@@ -142,7 +142,7 @@
     .tldesc{font-size:.84rem;color:var(--text2);line-height:1.7;}
 
     /* CERTS */
-    #certifications{background:var(--bg2);}
+    #competitions{background:var(--bg2);}
     .cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.2rem;}
     .cgrp{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:0 2px 12px var(--shadow);transition:all .22s;}
     .cgrp:hover{border-color:var(--accentbdr);box-shadow:0 8px 30px var(--shadowlg);}
@@ -154,6 +154,27 @@
     .ci:last-child{border-bottom:none;}
     .ci:hover{background:var(--bg2);}
     .cck{width:18px;height:18px;background:var(--accentbg);border:1px solid var(--accentbdr);border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+
+    /* EXTRA */
+    .tlorg{font-size:.8rem;font-style:italic;color:var(--text3);margin-bottom:.7rem;}
+    .tlist{list-style:none;display:flex;flex-direction:column;gap:.45rem;}
+    .tlist li{position:relative;padding-left:1.1rem;font-size:.84rem;color:var(--text2);line-height:1.7;}
+    .tlist li::before{content:'';position:absolute;left:0;top:.65em;width:5px;height:5px;background:var(--accent);border-radius:50%;}
+    .subt{font-family:'Fraunces',serif;font-size:1.25rem;font-weight:600;color:var(--text);letter-spacing:-.02em;margin:3.2rem 0 1.2rem;}
+    .subt:first-of-type{margin-top:0;}
+    .subt small{font-family:'Epilogue',sans-serif;font-size:.72rem;font-weight:400;color:var(--text3);margin-left:.6rem;letter-spacing:.02em;}
+    .ci-t{display:flex;flex-direction:column;gap:.15rem;}
+    .ci-n{font-weight:500;color:var(--text);}
+    .ci-d{font-size:.76rem;color:var(--text3);line-height:1.55;}
+    .ci-st{font-size:.62rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);}
+    .ci{align-items:flex-start;}
+    .cck{margin-top:.2rem;}
+    .crsgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1rem;}
+    .crs{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.2rem 1.3rem;box-shadow:0 2px 10px var(--shadow);transition:all .22s;}
+    .crs:hover{border-color:var(--accentbdr);box-shadow:0 6px 22px var(--shadowlg);transform:translateY(-2px);}
+    .crs-code{font-size:.65rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:.25rem;}
+    .crs-title{font-family:'Fraunces',serif;font-size:.98rem;font-weight:600;color:var(--text);line-height:1.3;margin-bottom:.4rem;}
+    .crs-desc{font-size:.8rem;color:var(--text2);line-height:1.65;}
 
     /* CONTACT */
     .cowrap{display:grid;grid-template-columns:1fr 1.2fr;gap:5rem;align-items:start;}
@@ -194,8 +215,9 @@
   <a href="#about"          onclick="cm()">About</a>
   <a href="#projects"       onclick="cm()">Projects</a>
   <a href="#skills"         onclick="cm()">Skills</a>
-  <a href="#experience"     onclick="cm()">Experience</a>
-  <a href="#certifications" onclick="cm()">Certifications</a>
+  <a href="#experience"     onclick="cm()">Leadership</a>
+  <a href="#competitions"   onclick="cm()">Competitions</a>
+  <a href="#courses"        onclick="cm()">Courses</a>
   <a href="#contact"        onclick="cm()">Contact</a>
 </div>
 
@@ -206,8 +228,9 @@
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#experience">Leadership</a></li>
+      <li><a href="#competitions">Competitions</a></li>
+      <li><a href="#courses">Courses</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="nr">
@@ -316,29 +339,22 @@
         <div class="ptech"><span class="ttag">JavaScript</span><span class="ttag">HTML/CSS</span><span class="ttag">Chrome Extension APIs</span><span class="ttag">Gemini AI API</span><span class="ttag">Git</span></div>
       </div>
 
-      <div class="pcard rv d3">
-        <div class="pnum">Project 04 — Community</div>
-        <span class="pbadge">Data Visualization</span>
-        <h3 class="ptitle">Marpole Neighbourhood House Website</h3>
-        <p class="pdesc">A public-facing website built for the Marpole Neighbourhood House and CCEL volunteer initiative. Visualizes lifestyle patterns and wellbeing data of elderly community members through interactive charts and maps, making raw data accessible to non-technical audiences.</p>
-        <div class="ptech"><span class="ttag">HTML</span><span class="ttag">CSS</span><span class="ttag">JavaScript</span><span class="ttag">GitHub</span></div>
-      </div>
-
-      <div class="pcard rv d4">
-        <div class="pnum">Project 05 — Personal</div>
-        <span class="pbadge">Productivity</span>
-        <h3 class="ptitle">Aesthetic Student Calendar</h3>
-        <p class="pdesc">A visually themed productivity calendar web app designed specifically for students who want a more intentional, beautiful way to organise their time. Part of a growing suite of student productivity tools — including a Co-op Assistant app with completed UI/UX and planned AI chatbot integration.</p>
-        <div class="ptech"><span class="ttag">HTML</span><span class="ttag">CSS</span><span class="ttag">JavaScript</span></div>
-      </div>
-
       <div class="pcard rv">
-        <div class="pnum">Project 06 — UBC</div>
+        <div class="pnum">Project 04 — UBC</div>
         <span class="pbadge">Club Website</span>
         <h3 class="ptitle">BOLT UBC Website</h3>
-        <p class="pdesc">Contributed to the website for BOLT, UBC's largest data club, which runs workshops, case competitions, and a free data consulting program for local businesses. Helped build the pages students and industry partners use to find events, membership, and partner information.</p>
+        <p class="pdesc">Helping improve the website of BOLT UBC, UBC\'s largest data club, through UI/UX design discussions, feature planning, and frontend development as Director of Technology.</p>
         <div class="ptech"><span class="ttag">Frontend Development</span><span class="ttag">UI/UX</span><span class="ttag">Responsive Design</span></div>
         <a href="https://www.boltubc.com/" target="_blank" rel="noopener" class="btn bg plink">Visit site ↗</a>
+      </div>
+
+      <div class="pcard rv d1">
+        <div class="pnum">Project 05 — ASIA 398</div>
+        <span class="pbadge">Interactive Website</span>
+        <h3 class="ptitle">Artistic &amp; Moral Influence of the Ramayana</h3>
+        <p class="pdesc">An interactive website built for my ASIA 398 final group project. A six-part comparative study covering art as a carrier of morality, how Rama is portrayed across cultures, feminist readings of Sita, modern media adaptations, and an interactive map of the epic's spread across Asia.</p>
+        <div class="ptech"><span class="ttag">HTML</span><span class="ttag">CSS</span><span class="ttag">JavaScript</span><span class="ttag">GitHub Pages</span></div>
+        <a href="https://amohan05251.github.io/ASIA_398-final-project/" target="_blank" rel="noopener" class="btn bg plink">Visit site ↗</a>
       </div>
 
     </div>
@@ -392,61 +408,53 @@
 <!-- EXPERIENCE -->
 <section id="experience">
   <div class="wrap">
-    <div class="ey rv">Experience</div>
-    <h2 class="st rv d1">Where I've <em>been.</em></h2>
+    <div class="ey rv">Leadership</div>
+    <h2 class="st rv d1">Clubs &amp; <em>leadership roles.</em></h2>
     <div class="tl">
 
       <div class="tli rv">
         <div class="tldw"><div class="tld"><div class="tldi"></div></div></div>
         <div class="tlc">
-          <div class="tltype">Present · UBC</div>
-          <div class="tltitle">Web Designer — Women in STEAM</div>
-          <div class="tldesc">Designing and maintaining the web presence for Women in STEAM at UBC, focusing on clear information structure and an accessible, welcoming user experience.</div>
+          <div class="tltype">2026 – 2027 · Present</div>
+          <div class="tltitle">Web Designer</div>
+          <div class="tlorg">Girls in STEAM UBC</div>
+          <ul class="tlist"><li>Design the user interface and visual layout of the organization’s website, creating a cohesive and accessible experience for prospective members and event attendees.</li><li>Collaborate with the team to translate organizational goals and event needs into clear, engaging web content and page designs.</li><li>Develop mockups and design assets that align with the club’s branding while promoting its mission of supporting women in STEAM.</li></ul>
         </div>
       </div>
-
       <div class="tli rv d1">
         <div class="tldw"><div class="tld"><div class="tldi"></div></div></div>
         <div class="tlc">
-          <div class="tltype">Hackathon</div>
-          <div class="tltitle">NW Hacks — Participant</div>
-          <div class="tldesc">Competed with a team of 3 to build the PrairieLearn Chrome Extension. Led the UI/UX design of the extension popup and main journal interface. Gained hands-on experience with the Gemini AI API and rapid full-stack product delivery under pressure.</div>
+          <div class="tltype">2026 – 2027 · Present</div>
+          <div class="tltitle">Director of Technology</div>
+          <div class="tlorg">BOLT UBC</div>
+          <ul class="tlist"><li>Collaborate with the technology team to improve the organization’s website through UI/UX design discussions and feature planning.</li><li>Brainstorm and propose ideas to enhance website functionality and user experience.</li><li>Contribute to technical planning for events and initiatives by working with cross-functional team members.</li></ul>
         </div>
       </div>
-
       <div class="tli rv d2">
         <div class="tldw"><div class="tld"><div class="tldi"></div></div></div>
         <div class="tlc">
-          <div class="tltype">Case Competition</div>
-          <div class="tltitle">Accenture Innovative Challenge — Selected Participant</div>
-          <div class="tldesc">Selected for a competitive team-based case competition (team of 4) focused on designing affordable, climate-resilient housing solutions for Humanity of Canada. Contributed to strategy development, research synthesis, and data-driven recommendations for a real-world problem.</div>
+          <div class="tltype">Oct – Dec 2026 · Volunteer</div>
+          <div class="tltitle">Frontend Developer &amp; Consultant</div>
+          <div class="tlorg">BOLT Consulting, BOLT UBC</div>
+          <ul class="tlist"><li>Contributing to the launch of BOLT Consulting, a new multidisciplinary initiative within BOLT UBC providing pro bono consulting services to organizations.</li><li>Developing frontend features for GenWell, a nonprofit organization, to improve website functionality, accessibility, and user experience.</li><li>Collaborating with cross-functional team members to translate organizational needs into practical digital solutions and support project delivery.</li></ul>
         </div>
       </div>
-
       <div class="tli rv d3">
         <div class="tldw"><div class="tld"><div class="tldi"></div></div></div>
         <div class="tlc">
-          <div class="tltype">Volunteer</div>
-          <div class="tltitle">CCEL — Community Data Volunteer</div>
-          <div class="tldesc">Volunteered with CCEL to build the Marpole Community Data Website — a data visualization platform to make community activity data accessible to the public through interactive charts and maps.</div>
+          <div class="tltype">2025 – 2026</div>
+          <div class="tltitle">Events Coordinator</div>
+          <div class="tlorg">BOLT UBC</div>
+          <ul class="tlist"><li>Assisted in organizing and executing club events by coordinating event setup and logistics.</li><li>Managed attendee registration, name tag distribution, and on-site event support.</li><li>Worked with the events team to ensure activities ran smoothly and provided a positive experience for participants.</li></ul>
         </div>
       </div>
-
       <div class="tli rv d4">
         <div class="tldw"><div class="tld"><div class="tldi"></div></div></div>
         <div class="tlc">
-          <div class="tltype">Volunteer</div>
-          <div class="tltitle">Hackathon Volunteer</div>
-          <div class="tldesc">Volunteered at a hackathon to understand event organisation from the inside. Gained insight into logistics, participant experience design, and how these events create conditions for learning and creativity.</div>
-        </div>
-      </div>
-
-      <div class="tli rv d4">
-        <div class="tldw"><div class="tld"><div class="tldi"></div></div></div>
-        <div class="tlc">
-          <div class="tltype">Competition</div>
-          <div class="tltitle">Robotics Competition — State-Level</div>
-          <div class="tldesc">Competed twice in state-level robotics competitions — a formative experience that built early foundations in engineering thinking, autonomous systems, teamwork, and problem-solving. Achieved 4th place.</div>
+          <div class="tltype">Feb 2026 · Volunteer</div>
+          <div class="tltitle">Community Data Volunteer</div>
+          <div class="tlorg">CCEL — Marpole Neighbourhood House</div>
+          <ul class="tlist"><li>Volunteered with CCEL to build a community data website that makes local activity and wellbeing data accessible to the public through interactive charts and maps.</li></ul>
         </div>
       </div>
 
@@ -456,27 +464,69 @@
 
 <div class="divider"></div>
 
-<!-- CERTIFICATIONS -->
-<section id="certifications">
+<!-- COMPETITIONS -->
+<section id="competitions">
   <div class="wrap">
-    <div class="ey rv">Certifications</div>
-    <h2 class="st rv d1">Courses &amp; <em>credentials.</em></h2>
+    <div class="ey rv">Competitions</div>
+    <h2 class="st rv d1">Where I've <em>competed.</em></h2>
+    <div class="pgrid">
+
+      <div class="pcard rv">
+        <div class="pnum">Mar 2026 — NW Hacks</div>
+        <span class="pbadge">Hackathon</span>
+        <h3 class="ptitle">NW Hacks — PrairieLearn Chrome Extension</h3>
+        <p class="pdesc">Built a Chrome extension with a team of 3 that helps students journal mistakes on PrairieLearn and revisit key concepts. Led UI/UX for the popup and journal interface and integrated the Gemini AI API for intelligent suggestions.</p>
+      </div>
+
+      <div class="pcard rv d1">
+        <div class="pnum">Case Competition — Toronto</div>
+        <span class="pbadge">Finalist · 2nd Place</span>
+        <h3 class="ptitle">Accenture Innovation Challenge</h3>
+        <p class="pdesc">Selected for the challenge and advanced as a finalist, ranking 2nd as one of the top 4 finalists among 12–14 teams. Contributed to a 3-member team building data-driven housing solutions.</p>
+      </div>
+
+      <div class="pcard rv d2">
+        <div class="pnum">State Level — WRO</div>
+        <span class="pbadge">4th Place</span>
+        <h3 class="ptitle">World Robot Olympiad</h3>
+        <p class="pdesc">Built and programmed an autonomous EV3 robot, securing 4th place at the state-level WRO competition.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- COURSES & CERTIFICATIONS -->
+<section id="courses">
+  <div class="wrap">
+    <div class="ey rv">Courses &amp; Certifications</div>
+    <h2 class="st rv d1">Learning &amp; <em>credentials.</em></h2>
+    <h3 class="subt">Certifications</h3>
     <div class="cgrid">
       <div class="cgrp rv">
         <div class="chead"><div class="cico">🎓</div><div class="ciss">Stanford University</div></div>
-        <div class="clist">
-          <div class="ci"><div class="cck"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--accent);width:10px;height:10px"><polyline points="1.5,6 4.5,9 10.5,3"/></svg></div>Supervised Machine Learning</div>
-          <div class="ci"><div class="cck"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--accent);width:10px;height:10px"><polyline points="1.5,6 4.5,9 10.5,3"/></svg></div>Regression &amp; Classification</div>
-          <div class="ci"><div class="cck"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--accent);width:10px;height:10px"><polyline points="1.5,6 4.5,9 10.5,3"/></svg></div>Advanced Learning Algorithms</div>
-          <div class="ci"><div class="cck"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--accent);width:10px;height:10px"><polyline points="1.5,6 4.5,9 10.5,3"/></svg></div>Unsupervised Learning</div>
-          <div class="ci"><div class="cck"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--accent);width:10px;height:10px"><polyline points="1.5,6 4.5,9 10.5,3"/></svg></div>Recommenders &amp; Reinforcement Learning</div>
-        </div>
+        <div class="clist"><div class="ci"><div class="cck"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--accent);width:10px;height:10px"><polyline points="1.5,6 4.5,9 10.5,3"/></svg></div>Supervised Machine Learning</div><div class="ci"><div class="cck"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--accent);width:10px;height:10px"><polyline points="1.5,6 4.5,9 10.5,3"/></svg></div>Regression &amp; Classification</div><div class="ci"><div class="cck"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--accent);width:10px;height:10px"><polyline points="1.5,6 4.5,9 10.5,3"/></svg></div>Advanced Learning Algorithms</div><div class="ci"><div class="cck"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--accent);width:10px;height:10px"><polyline points="1.5,6 4.5,9 10.5,3"/></svg></div>Unsupervised Learning</div><div class="ci"><div class="cck"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--accent);width:10px;height:10px"><polyline points="1.5,6 4.5,9 10.5,3"/></svg></div>Recommenders &amp; Reinforcement Learning</div></div>
       </div>
       <div class="cgrp rv d1">
         <div class="chead"><div class="cico">🔷</div><div class="ciss">IBM</div></div>
-        <div class="clist">
-          <div class="ci"><div class="cck"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--accent);width:10px;height:10px"><polyline points="1.5,6 4.5,9 10.5,3"/></svg></div>Python for Data Science, AI &amp; Development</div>
-        </div>
+        <div class="clist"><div class="ci"><div class="cck"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--accent);width:10px;height:10px"><polyline points="1.5,6 4.5,9 10.5,3"/></svg></div>Python for Data Science, AI &amp; Development</div></div>
+      </div>
+    </div>
+    <h3 class="subt" style="margin-top:3.2rem">UBC Coursework <small>B.Sc. Combined Major, Computer Science &amp; Mathematics</small></h3>
+    <div class="cgrid">
+      <div class="cgrp rv">
+        <div class="chead"><div class="cico">💻</div><div class="ciss">Computer Science</div></div>
+        <div class="clist"><div class="ci"><div class="cck"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--accent);width:10px;height:10px"><polyline points="1.5,6 4.5,9 10.5,3"/></svg></div><div class="ci-t"><span class="ci-n">CPSC 103 — Intro to Systematic Program Design</span><span class="ci-d">Designing programs step by step using structured, data-driven design methods.</span></div></div><div class="ci"><div class="cck"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--accent);width:10px;height:10px"><polyline points="1.5,6 4.5,9 10.5,3"/></svg></div><div class="ci-t"><span class="ci-n">CPSC 107 — Systematic Program Design</span><span class="ci-d">Building larger programs with abstraction, recursion, and thorough testing.</span></div></div><div class="ci"><div class="cck"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--accent);width:10px;height:10px"><polyline points="1.5,6 4.5,9 10.5,3"/></svg></div><div class="ci-t"><span class="ci-n">CPSC 121 — Models of Computation</span> <span class="ci-st">In progress</span><span class="ci-d">Logic, proof techniques, and the discrete math behind computing.</span></div></div><div class="ci"><div class="cck"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--accent);width:10px;height:10px"><polyline points="1.5,6 4.5,9 10.5,3"/></svg></div><div class="ci-t"><span class="ci-n">CPSC 210 — Software Construction</span> <span class="ci-st">In progress</span><span class="ci-d">Designing, testing, and building larger object-oriented programs in teams.</span></div></div><div class="ci"><div class="cck"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--accent);width:10px;height:10px"><polyline points="1.5,6 4.5,9 10.5,3"/></svg></div><div class="ci-t"><span class="ci-n">CPSC 213 — Introduction to Computer Systems</span> <span class="ci-st">In progress</span><span class="ci-d">How programs run on hardware: machine code, memory, and concurrency.</span></div></div><div class="ci"><div class="cck"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--accent);width:10px;height:10px"><polyline points="1.5,6 4.5,9 10.5,3"/></svg></div><div class="ci-t"><span class="ci-n">CPSC 221 — Basic Algorithms and Data Structures</span> <span class="ci-st">In progress</span><span class="ci-d">Core data structures and the design and analysis of algorithms.</span></div></div><div class="ci"><div class="cck"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--accent);width:10px;height:10px"><polyline points="1.5,6 4.5,9 10.5,3"/></svg></div><div class="ci-t"><span class="ci-n">CPSC 344 — Intro to Human Computer Interaction Methods</span> <span class="ci-st">In progress</span><span class="ci-d">Designing and evaluating user interfaces with user-centred methods.</span></div></div></div>
+      </div>
+      <div class="cgrp rv d1">
+        <div class="chead"><div class="cico">∑</div><div class="ciss">Mathematics</div></div>
+        <div class="clist"><div class="ci"><div class="cck"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--accent);width:10px;height:10px"><polyline points="1.5,6 4.5,9 10.5,3"/></svg></div><div class="ci-t"><span class="ci-n">MATH 101 — Integral Calculus with Applications</span><span class="ci-d">Integration techniques, sequences and series, and real-world applications.</span></div></div><div class="ci"><div class="cck"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--accent);width:10px;height:10px"><polyline points="1.5,6 4.5,9 10.5,3"/></svg></div><div class="ci-t"><span class="ci-n">MATH 110 — Differential Calculus</span><span class="ci-d">Limits, derivatives, and their applications to rates of change and optimization.</span></div></div><div class="ci"><div class="cck"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--accent);width:10px;height:10px"><polyline points="1.5,6 4.5,9 10.5,3"/></svg></div><div class="ci-t"><span class="ci-n">MATH 200 — Calculus III</span> <span class="ci-st">In progress</span><span class="ci-d">Multivariable calculus: partial derivatives, multiple integrals, and vector calculus.</span></div></div><div class="ci"><div class="cck"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--accent);width:10px;height:10px"><polyline points="1.5,6 4.5,9 10.5,3"/></svg></div><div class="ci-t"><span class="ci-n">MATH 220 — Mathematical Proof</span> <span class="ci-st">In progress</span><span class="ci-d">Reading and writing rigorous mathematical proofs.</span></div></div><div class="ci"><div class="cck"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--accent);width:10px;height:10px"><polyline points="1.5,6 4.5,9 10.5,3"/></svg></div><div class="ci-t"><span class="ci-n">MATH 221 — Matrix Algebra</span><span class="ci-d">Systems of linear equations, matrices, vector spaces, and eigenvalues.</span></div></div><div class="ci"><div class="cck"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--accent);width:10px;height:10px"><polyline points="1.5,6 4.5,9 10.5,3"/></svg></div><div class="ci-t"><span class="ci-n">MATH 340 — Introduction to Linear Programming</span> <span class="ci-st">In progress</span><span class="ci-d">Modelling and solving linear optimization problems, including the simplex method.</span></div></div></div>
+      </div>
+      <div class="cgrp rv d2">
+        <div class="chead"><div class="cico">📊</div><div class="ciss">Data, Language &amp; Business</div></div>
+        <div class="clist"><div class="ci"><div class="cck"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--accent);width:10px;height:10px"><polyline points="1.5,6 4.5,9 10.5,3"/></svg></div><div class="ci-t"><span class="ci-n">DSCI 100 — Introduction to Data Science</span><span class="ci-d">Cleaning, visualizing, and analyzing data with code, plus intro classification and regression.</span></div></div><div class="ci"><div class="cck"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--accent);width:10px;height:10px"><polyline points="1.5,6 4.5,9 10.5,3"/></svg></div><div class="ci-t"><span class="ci-n">LING 100 — Intro to Language and Linguistics</span><span class="ci-d">How human language works: sounds, words, sentences, and meaning.</span></div></div><div class="ci"><div class="cck"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--accent);width:10px;height:10px"><polyline points="1.5,6 4.5,9 10.5,3"/></svg></div><div class="ci-t"><span class="ci-n">COMR 329 — Principles of Organizational Behaviour</span><span class="ci-d">How people and teams behave in organizations: motivation, leadership, and communication.</span></div></div></div>
       </div>
     </div>
   </div>
